@@ -1,13 +1,17 @@
 ![](logo/rabbus-logo.png)
 
+## NOTE
+
+This repository is forked from https://github.com/derickbailey/rabbus.git solely to make it use payapi-whistlepunk as a dependency.
+
 A highly opinionated, yet minimal, set of message bus abstractions for NodeJS.
-It is built on top of [RabbitMQ](http://rabbitmq.com), 
+It is built on top of [RabbitMQ](http://rabbitmq.com),
 with [rabbot](https://github.com/arobson/rabbot) as the primary library
 for working with RabbitMQ.
 
 ## About Rabbus
 
-The service bus implementation is basic, but includes several of the most 
+The service bus implementation is basic, but includes several of the most
 common patterns:
 
 * Send / Receive
@@ -16,7 +20,7 @@ common patterns:
 
 The items on the left are "producers" as they produce a message for RabbitMQ
 to route and handle. Items on the right are "consumers" as they consume a
-message from a queue in RabbitMQ. 
+message from a queue in RabbitMQ.
 
 Producers and Consumers inherit from a base class of that name, providing
 common functionality and a means by which all producers / consumers can be
@@ -87,9 +91,9 @@ point where they need to be used. The configuration of each object can then be
 encapsulated for the intended use, allowing easier testing and maintenance.
 
 There are a few commonalities between all of these object pairs. Most notably,
-the object that sends a message to RabbitMQ only needs to know about the 
+the object that sends a message to RabbitMQ only needs to know about the
 exchange to which it sends. Conversely, the object that consumes a message
-from within RabbitMQ needs to know about both the exchange and the queue to 
+from within RabbitMQ needs to know about both the exchange and the queue to
 which it subscribes.
 
 ### Basic API and Middleware
@@ -114,9 +118,9 @@ For definitions of these parameters, please see the [middleware documentation](d
 
 ### Topology
 
-In addition to the pattern objects, Rabbus also includes a topology object and 
+In addition to the pattern objects, Rabbus also includes a topology object and
 use of middleware within it's objects. These object types allow much greater
-freedom and flexibility with Rabbus, when needed. 
+freedom and flexibility with Rabbus, when needed.
 
 The Topology object allows you to pre-define and build the needed topology for
 your RabbitMQ scenario. You can also use existing topology constructs (exchanges,
@@ -214,7 +218,7 @@ Rabbus provide a `noBatch` option for Queue definitions.
 var Subscriber = new Rabbus.Subscriber({
   // ...
   queue: {
-    //... 
+    //...
     noBatch: true
   }
 });
@@ -229,14 +233,14 @@ The following Rabbus objects provide the `noBatch` feature:
 ### The messageType Attribute
 
 Rabbus is built on top of the rabbot library, which uses a
-`messageType` attribute for messages. The behavior of the 
-`messageType` attribute makes rabbot and Rabbus behave 
+`messageType` attribute for messages. The behavior of the
+`messageType` attribute makes rabbot and Rabbus behave
 somewhat differently than RabbitMQ / AMQP on their own.
 
-Internally, rabbot uses an in-memory messaging library called 
-Postal.js to facilitate message delivery to consumer functions. 
-The `messageType` attribute is used by postal as it's own form 
-of a routing key. 
+Internally, rabbot uses an in-memory messaging library called
+Postal.js to facilitate message delivery to consumer functions.
+The `messageType` attribute is used by postal as it's own form
+of a routing key.
 
 Because of this, you can have two consumers receive a copy of
 a single message from a single queue... or, have messages from
@@ -271,8 +275,8 @@ c2.subscribe(function(msg, props, actions){
 ```
 
 In this example, it is highly likely that you will receive both
-a "c1 got it!" message and a "c2 got it!" message in the 
-console, when publishing a message for c1 to consumer.  This 
+a "c1 got it!" message and a "c2 got it!" message in the
+console, when publishing a message for c1 to consumer.  This
 happens because of the `messageType` being the same. rabbot
 has internally used the `messageType` to say that both the c1
 and c2 handler methods should receive the message.
@@ -280,13 +284,13 @@ and c2 handler methods should receive the message.
 Leaving the `messageType` blank will cause rabbot to use the
 routing key for the message, as the means by which it delivers
 messages to handlers. As long as you are using unique routing
-keys, you should probably leave the `messageType` blank. 
+keys, you should probably leave the `messageType` blank.
 
 That's not to say there isn't value in what rabbot does. This
 is just different than standard RabbitMQ/AMQP.
 
 ## Legalese
 
-Rabbus is Copyright &copy;2016 Muted Solutions, LLC. All Rights Reserved. 
+Rabbus is Copyright &copy;2016 Muted Solutions, LLC. All Rights Reserved.
 
 Rabbus is distributed under the [MIT license](http://mutedsolutions.mit-license.org).

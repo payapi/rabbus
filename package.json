@@ -1,15 +1,25 @@
 {
-  "name": "rabbus",
-  "version": "0.8.2",
-  "description": "A micro-servicebus for RabbitMQ",
+  "name": "payapi-rabbus",
+  "version": "0.8.3",
+  "description": "A micro-servicebus for RabbitMQ. Forked from https://github.com/derickbailey/rabbus.git solely to make it use payapi-whistlepunk as a dependency.",
   "main": "rabbus/lib/index.js",
   "scripts": {
     "test": "grunt specs"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/derickbailey/rabbus.git"
+    "url": "https://github.com/payapi/rabbus.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "contributors": [
+    {
+      "name": "Marko Haapala",
+      "email": "marko@payapi.io",
+      "url": "https://es.linkedin.com/in/markohaapala"
+    }
+  ],
   "keywords": [
     "rabbitmq",
     "messaging",
@@ -26,12 +36,12 @@
     "request",
     "response"
   ],
-  "author": "Derick Bailey",
+  "author": "payapi.io",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/derickbailey/rabbus/issues"
+    "url": "https://github.com/payapi/rabbus/issues"
   },
-  "homepage": "https://github.com/derickbailey/rabbus",
+  "homepage": "https://github.com/payapi/rabbus",
   "devDependencies": {
     "grunt": "^1.0",
     "grunt-contrib-jshint": "^1.0",
@@ -45,7 +55,7 @@
     "postal": "2.0.4",
     "underscore": "1.8.3",
     "uuid": "2.0.2",
-    "whistlepunk": "0.3.3"
+    "payapi-whistlepunk": "0.3.4"
   },
   "peerDependencies": {},
   "engines": {

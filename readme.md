@@ -1,13 +1,13 @@
 ![](logo/rabbus-logo.png)
 
-## NOTE
-
-This repository is forked from https://github.com/derickbailey/rabbus.git solely to make it use payapi-whistlepunk as a dependency.
-
 A highly opinionated, yet minimal, set of message bus abstractions for NodeJS.
 It is built on top of [RabbitMQ](http://rabbitmq.com),
 with [rabbot](https://github.com/arobson/rabbot) as the primary library
 for working with RabbitMQ.
+
+## NOTE
+
+This repository is forked from https://github.com/derickbailey/rabbus.git solely to make it use payapi-whistlepunk as a dependency.
 
 ## About Rabbus
 

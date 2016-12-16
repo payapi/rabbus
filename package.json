@@ -1,6 +1,6 @@
 {
   "name": "payapi-rabbus",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "A micro-servicebus for RabbitMQ. Forked from https://github.com/derickbailey/rabbus.git solely to make it use payapi-whistlepunk as a dependency.",
   "main": "rabbus/lib/index.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "grunt-contrib-watch": "^1.0",
     "grunt-jasmine-nodejs": "^1.5",
     "moment": "2.14.1",
-    "rabbot": "^1.0"
+    "payapi-rabbot": "^1.0"
   },
   "dependencies": {
     "generic-middleware": "2.1.0",

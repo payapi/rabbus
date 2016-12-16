@@ -16,7 +16,7 @@ message, ensuring that it gets back to the requester correctly.
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeRequester(){
   Rabbus.Requester.call(this, rabbot, {
@@ -61,7 +61,7 @@ The following options are available when configuring a requester:
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeResponder(){
   Rabbus.Responder.call(this, rabbot, {

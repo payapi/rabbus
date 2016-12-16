@@ -1,5 +1,5 @@
 var util = require("util");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 var Rabbus = require("../../rabbus/lib");
 var connection = require("../connection");

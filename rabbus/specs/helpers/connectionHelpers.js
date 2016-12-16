@@ -1,4 +1,4 @@
-var rabbit = require("rabbot");
+var rabbit = require("payapi-rabbot");
 var config = require("../config");
 
 beforeAll(function(done){

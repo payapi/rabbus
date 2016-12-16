@@ -15,7 +15,7 @@ listening.
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomePublisher(){
   Rabbus.Publisher.call(this, rabbot, {
@@ -62,7 +62,7 @@ The following options are available when configuring a publisher:
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeSubscriber(){
   Rabbus.Subscriber.call(this, rabbot, {

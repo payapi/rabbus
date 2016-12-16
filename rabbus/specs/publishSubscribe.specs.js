@@ -1,4 +1,4 @@
-var rabbit = require("rabbot");
+var rabbit = require("payapi-rabbot");
 var Publisher = require("../lib/pub-sub/publisher");
 var Subscriber = require("../lib/pub-sub/subscriber");
 

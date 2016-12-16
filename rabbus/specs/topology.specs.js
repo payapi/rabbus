@@ -1,4 +1,4 @@
-var rabbit = require("rabbot");
+var rabbit = require("payapi-rabbot");
 
 var Topology = require("../lib/topology");
 var Sender = require("../lib/send-rec/sender");

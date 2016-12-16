@@ -1,5 +1,5 @@
 var util = require("util");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 var config = require("../rabbus/specs/config");
 

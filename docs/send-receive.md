@@ -11,7 +11,7 @@ allowing you to specify the binding key.
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeSender(){
   Rabbus.Sender.call(this, rabbot, {
@@ -60,7 +60,7 @@ The following options are available when configuring a sender:
 
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeReceiver(){
   Rabbus.Receiver.call(this, rabbot, {

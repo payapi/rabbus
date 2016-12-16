@@ -1,4 +1,4 @@
-var rabbit = require("rabbot");
+var rabbit = require("payapi-rabbot");
 
 var Requester = require("../lib/req-res/requester");
 var Responder = require("../lib/req-res/responder");

@@ -1,5 +1,5 @@
 var postal = require("postal");
-var whistlepunk = require("whistlepunk");
+var whistlepunk = require("payapi-whistlepunk");
 
 var config =  {
   adapters: {

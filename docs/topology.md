@@ -22,7 +22,7 @@ For example, a Sender object can be configured like this:
 ```js
 var util = require("util");
 var Rabbus = require("rabbus");
-var rabbot = require("rabbot");
+var rabbot = require("payapi-rabbot");
 
 function SomeSender(){
   Rabbus.Sender.call(this, rabbot, {
